@@ -1,0 +1,122 @@
+@import "~bootstrap/scss/bootstrap.scss";
+// Common styles of the project
+body {
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+		"Droid Sans", "Helvetica Neue", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+	height: 100%;
+}
+
+.page {
+}
+
+.page__wrapper {
+	min-height: 100%;
+}
+
+* html .page__wrapper {
+	height: 100%;
+}
+
+.page__buffer {
+	height: 50px;
+}
+
+.to-do-list {
+	min-height: 100vh;
+	.list-item {
+		flex: 1;
+		padding: 0 8px;
+		&:first-child {
+			padding-left: 0;
+		}
+		&:last-child {
+			padding-right: 0;
+		}
+		h2 {
+			text-align: center;
+			background-color: #f1f1f1;
+			box-shadow: 0 0 5px #ccc;
+			text-transform: capitalize;
+		}
+		.list-item-area {
+			height: 100%;
+			// cursor: pointer;
+			box-shadow: 0 0 5px #ccc;
+			padding: 24px 16px;
+		}
+	}
+	.area-item {
+		padding: 8px;
+		box-shadow: 0 0 5px #ccc;
+		margin-bottom: 16px;
+		h3 {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 8px;
+		}
+		p {
+			font-size: 14px;
+			color: #5a5a5a;
+		}
+		.btn-wrapper {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			button {
+				font-size: 14px;
+			}
+		}
+	}
+}
+
+#to-do-title {
+	cursor: pointer;
+}
+
+#edit-area-wrapper {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(#000, 0.5);
+	display: none;
+	#close-popup {
+		display: inline-block;
+		color: #fff;
+		position: absolute;
+		top: 8px;
+		right: 8px;
+		padding: 8px;
+	}
+	.edit-area {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 600px;
+		background-color: #fff;
+		padding: 16px;
+	}
+	input {
+		width: 100%;
+	}
+	textarea {
+		width: 100%;
+		resize: none;
+	}
+	span {
+		display: inline-block;
+		cursor: pointer;
+		position: absolute;
+		top: 4px;
+		right: 4px;
+	}
+}
