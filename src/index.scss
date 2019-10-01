@@ -80,6 +80,10 @@ body {
 	cursor: pointer;
 }
 
+.opened-edit-area-wrapper {
+	display: block !important;
+}
+
 #edit-area-wrapper {
 	position: fixed;
 	top: 0;
